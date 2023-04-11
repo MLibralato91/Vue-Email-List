@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      titolo: 'esperimento API',
+      titolo: 'esperimento API Email',
       rndEmail: [],
       basePath: 'https://flynn.boolean.careers/exercises/api/',
       complete: false,

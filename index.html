@@ -19,27 +19,33 @@
 
 <body>
   <div id="app" class="">
-    
-
-    <div class="card" style="width: 18rem;">
+    <div class="container">
+      <div class="row text-center" >
+        <div class="col-12">
+          <div class="card" >
       
-      <div class="card-body">
-        <h5 class="card-title">{{titolo}}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-       
-        <ul v-if="rndEmail.length === 10">
-          <li v-for="email in rndEmail">
-            {{email}}
-          </li>
-        </ul>
-        <div v-else>
-          <div class="spinner-border m-5" role="status">
-            <span class="visually-hidden">Loading...</span>
+            <div class="card-body">
+              <h5 class="card-title">{{titolo}}</h5>
+              
+             
+              <ul class="list-group" v-if="rndEmail.length === 10">
+                <li class="list-group-item" v-for="email in rndEmail">
+                  {{email}}
+                </li>
+              </ul>
+              <div v-else>
+                <div class="spinner-border m-5" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary"  @click="getData" :disabled="(rndEmail.length === 10) ? false : true">Crea le tue Email</a>
+            </div>
           </div>
         </div>
-        <a href="#" class="btn btn-primary"  @click="getData" :disabled="(rndEmail.length === 10) ? false : true">Go somewhere</a>
       </div>
     </div>
+
+    
   </div>
 
 
