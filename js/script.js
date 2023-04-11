@@ -20,10 +20,7 @@ createApp({
       }
 
     },
-    isDisabled() {
-      if (this.rndEmail.length !== 10)
-        this.complete = true;
-    }
+    
   },
   mounted() {
     this.getData();
